@@ -40,8 +40,44 @@ else:
 Задача, тренировка, круг
 
 
+def функця(x,y):
+    return abs(x**2+y**2) <= 1; # возвращает модуль числа, то что в скобках, потом сравнивает это с единицей(<=1)
+
+x = float(input("Введите число:")); # вещественные данные(с запятой)
+y = float(input("Введите число:"));
+
+if функця(x,y):
+    print("YES")
+else:
+    print("NO")
+    
+
 <img width="480" height="479" alt="image" src="https://github.com/user-attachments/assets/48eaae25-baf6-46df-b221-7eebacc70989" />
 
 
+<img width="328" height="256" alt="image" src="https://github.com/user-attachments/assets/203006b1-afca-4696-9154-747d85a9c0b1" />
 
+
+Задача 3
+
+def функця(x,y):
+    return ((x + 1)**2 + (y - 1)**2 <= 4 and -x - y <= 0 and -2*x + y >= 2) or (((x + 1)**2 + (y - 1)**2 >= 4) and -x - y >= 0 and -2*x + y <= 2) # возвращает модуль числа, то что в скобках, потом сравнивает это с единицей(<=1)
+# or  и and нужно отделять друг от друга скобками, чтобы питон воспринимал их, как две отдельные задачи
+x = float(input("Введите число:")); # вещественные данные(с запятой)
+y = float(input("Введите число:"));
+
+if функця(x,y):
+    print("YES")
+else:
+    print("NO")
+
+
+# (x + 1)**2 + (y - 1)**2 <= 4 то, что внутри окружности, (x + 1)**2 + (y - 1)**2 >= 4 за пределами окружности
+# -x - y <= 0 and -2*x + y >= 2 две стороны полосочек, создающих карман и наоборот -x - y >= 0 and -2*x + y <= 2
+
+
+
+<img width="558" height="560" alt="image" src="https://github.com/user-attachments/assets/912cc32c-4335-42c8-8fd8-6fbc2880abe1" />
+
+<img width="326" height="697" alt="image" src="https://github.com/user-attachments/assets/30025039-3cc6-4569-9f47-c6917ecbcb73" />
 
