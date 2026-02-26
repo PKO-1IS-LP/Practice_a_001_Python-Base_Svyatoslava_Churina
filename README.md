@@ -81,3 +81,24 @@ else:
 
 <img width="326" height="697" alt="image" src="https://github.com/user-attachments/assets/30025039-3cc6-4569-9f47-c6917ecbcb73" />
 
+
+
+Задача 4 , парабола
+
+def функця(x,y):
+    return (x**2 < y) or (-x**2 > y)# x должен быть меньше y, чтобы не выходить наружу, а оставаться внутри
+# в обратном случае(отрицательная парабола), x расширяется, а y идет вниз(уменьшается), поэтому x больше y
+# or  и and нужно отделять друг от друга скобками, чтобы питон воспринимал их, как две отдельные задачи
+x = float(input("Введите число:")) # вещественные данные(с запятой)
+y = float(input("Введите число:"))
+
+if функця(x,y):
+    print("YES")
+else:
+    print("NO")
+
+
+<img width="268" height="603" alt="image" src="https://github.com/user-attachments/assets/956f6729-1668-481e-b404-302fa889a920" />
+
+<img width="316" height="144" alt="image" src="https://github.com/user-attachments/assets/9214aba0-4bab-44b6-a309-9a72b7947513" />
+
