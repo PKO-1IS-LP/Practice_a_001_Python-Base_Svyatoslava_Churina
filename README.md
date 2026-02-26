@@ -36,3 +36,12 @@ else:
 <img width="256" height="255" alt="image" src="https://github.com/user-attachments/assets/a57437d5-ad83-4a6b-995a-807682694d7b" />
 
 
+
+Задача, тренировка, круг
+
+
+<img width="480" height="479" alt="image" src="https://github.com/user-attachments/assets/48eaae25-baf6-46df-b221-7eebacc70989" />
+
+
+
+
