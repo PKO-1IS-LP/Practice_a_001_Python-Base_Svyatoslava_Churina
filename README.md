@@ -100,14 +100,26 @@ else:
 
 **Вывод(попадает ли в область):**
 
+<img width="834" height="94" alt="image" src="https://github.com/user-attachments/assets/3f7d3958-fd2e-48a9-b4ed-f947cfedbdbd" />
 
 
+## Задача 3 
 
+**Условие:** Принадлежит ли точка закрашенной области, образованной кругом и двумя прямыми?
 
+**График условия:**
 
+<img width="326" height="697" alt="image" src="https://github.com/user-attachments/assets/30025039-3cc6-4569-9f47-c6917ecbcb73" />
 
-Задача 3
+**Визуализация условия:**
 
+<img width="558" height="560" alt="image" src="https://github.com/user-attachments/assets/912cc32c-4335-42c8-8fd8-6fbc2880abe1" />
+
+<img width="248" height="229" alt="image" src="https://github.com/user-attachments/assets/1592eb9c-d314-4da3-aad6-c3b4a858a192" />
+
+**Код:**
+
+```python
 def функця(x,y):
     return ((x + 1)**2 + (y - 1)**2 <= 4 and -x - y <= 0 and -2*x + y >= 2) or (((x + 1)**2 + (y - 1)**2 >= 4) and -x - y >= 0 and -2*x + y <= 2) # возвращает модуль числа, то что в скобках, потом сравнивает это с единицей(<=1)
 # or  и and нужно отделять друг от друга скобками, чтобы питон воспринимал их, как две отдельные задачи
@@ -122,21 +134,34 @@ else:
 
 # (x + 1)**2 + (y - 1)**2 <= 4 то, что внутри окружности, (x + 1)**2 + (y - 1)**2 >= 4 за пределами окружности
 # -x - y <= 0 and -2*x + y >= 2 две стороны полосочек, создающих карман и наоборот -x - y >= 0 and -2*x + y <= 2
+```
+
+**Вывод(попадает ли в область):**
+
+<img width="746" height="99" alt="image" src="https://github.com/user-attachments/assets/de96942f-0d37-4a7b-b724-81bb69874c75" />
 
 
 
-<img width="558" height="560" alt="image" src="https://github.com/user-attachments/assets/912cc32c-4335-42c8-8fd8-6fbc2880abe1" />
-
-<img width="326" height="697" alt="image" src="https://github.com/user-attachments/assets/30025039-3cc6-4569-9f47-c6917ecbcb73" />
 
 
+## Задача 4 (парабола)
+**Условие:** найти точки вхождения в область гипербол (не учитывая границы)
 
-Задача 4 , парабола
+**График условия:**
 
+<img width="316" height="144" alt="image" src="https://github.com/user-attachments/assets/9214aba0-4bab-44b6-a309-9a72b7947513" />
+
+**Визуализация условия:**
+
+<img width="268" height="603" alt="image" src="https://github.com/user-attachments/assets/956f6729-1668-481e-b404-302fa889a920" />
+
+**Код:**
+
+```python
 def функця(x,y):
     return (x**2 < y) or (-x**2 > y)# x должен быть меньше y, чтобы не выходить наружу, а оставаться внутри
 # в обратном случае(отрицательная парабола), x расширяется, а y идет вниз(уменьшается), поэтому x больше y
-# or  и and нужно отделять друг от друга скобками, чтобы питон воспринимал их, как две отдельные задачи
+# or и and нужно отделять друг от друга скобками, чтобы питон воспринимал их, как две отдельные задачи
 x = float(input("Введите число:")) # вещественные данные(с запятой)
 y = float(input("Введите число:"))
 
@@ -144,9 +169,15 @@ if функця(x,y):
     print("YES")
 else:
     print("NO")
+```
+
+**Вывод(попадает ли в область):**
+
+<img width="810" height="89" alt="image" src="https://github.com/user-attachments/assets/ae94913b-9ab8-4205-82a8-0d64a01023d1" />
 
 
-<img width="268" height="603" alt="image" src="https://github.com/user-attachments/assets/956f6729-1668-481e-b404-302fa889a920" />
 
-<img width="316" height="144" alt="image" src="https://github.com/user-attachments/assets/9214aba0-4bab-44b6-a309-9a72b7947513" />
+
+
+
 
