@@ -36,7 +36,9 @@ else:
 <img width="675" height="90" alt="image" src="https://github.com/user-attachments/assets/0fee54fc-70eb-403c-ad8c-d2d525fe2e64" />
 
 
-## Задача 2: Ромбовидная область
+## Задача 2: Ромб
+
+**Условие:** Принадлежит ли точка ромбу?
 
 **График условия:**
 
@@ -46,11 +48,9 @@ else:
 
 <img width="256" height="255" alt="image" src="https://github.com/user-attachments/assets/a57437d5-ad83-4a6b-995a-807682694d7b" />
 
+**Код:**
 
-
-Код программы:
-
-
+```python
 def функця(x, y):
     # возвращает модуль суммы, сравнивает с единицей
     return abs(x + y) <= 1 and abs(-x + y) <= 1
@@ -62,29 +62,48 @@ if функця(x, y):
     print("YES")
 else:
     print("NO")
-'''
+```
+
+**Вывод(попадает ли в область):**
+
+<img width="755" height="90" alt="image" src="https://github.com/user-attachments/assets/23ceeec3-2efb-49c9-a445-9a6a41fa6354" />
 
 
+## Тренировочная задача: Круг
 
-Задача, тренировка, круг
+**Условие:** Принадлежит ли точка кругу радиусом 1 с центром в начале координат?
 
-
-def функця(x,y):
-    return abs(x**2+y**2) <= 1 # возвращает модуль числа, то что в скобках, потом сравнивает это с единицей(<=1)
-
-x = float(input("Введите число:")) # вещественные данные(с запятой)
-y = float(input("Введите число:"))
-
-if функця(x,y):
-    print("YES")
-else:
-    print("NO")
-    
+**Визуализация условия:**
 
 <img width="480" height="479" alt="image" src="https://github.com/user-attachments/assets/48eaae25-baf6-46df-b221-7eebacc70989" />
 
+**График условия:**
 
 <img width="328" height="256" alt="image" src="https://github.com/user-attachments/assets/203006b1-afca-4696-9154-747d85a9c0b1" />
+
+**Код:**
+
+```python
+def функция(x, y):
+    # x**2 + y**2 всегда неотрицательно, поэтому abs() не нужен.
+    # Возвращает True, если точка внутри круга или на его границе.
+    return (x**2 + y**2) <= 1
+
+x = float(input("Введите число x:"))
+y = float(input("Введите число y:"))
+
+if функция(x, y):
+    print("YES")
+else:
+    print("NO")
+```    
+
+**Вывод(попадает ли в область):**
+
+
+
+
+
 
 
 Задача 3
