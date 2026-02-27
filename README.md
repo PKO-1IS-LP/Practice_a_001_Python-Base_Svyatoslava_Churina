@@ -203,12 +203,62 @@ def Genre_book():
     print("2. Фэнтези")
     print("3. Назад")
 
-def two():
+def Genre_film():
     clear()
     print("\n--- Жанр ---")
     print("1. Исторические фильмы")
-    print("2. Фэнтези")
+    print("2. Фантастика")
     print("3. Назад")
+
+def Film_History():
+    clear()
+    print("\n--- Фильмы ---")
+    print("1. Анна Болейн")
+    print("2. Две королевы")
+    print("3. Назад")
+
+def Film_Fantastica():
+    clear()
+    print("\n--- Фильмы ---")
+    print("1. Железный человек")
+    print("2. Аватар")
+    print("3. Назад")
+
+def content_Iron_man():
+    clear()
+    print("\n--- Содержание ---")
+    print("""1.Гениальный изобретатель и миллиардер Тони Старк попадает в плен к террористам и,
+    получив ранение от собственного оружия, создаёт в пещере первый бронированный костюм,чтобы совершить побег. 
+    Вернувшись домой, он переосмысливает свою жизнь, создаёт более совершенную версию костюма и вступает в схватку
+    с коварным деловым партнёром, чтобы остановить продажи оружия террористам и спасти невинных людей """)
+    print("2. Назад")
+
+def content_Avatar():
+    clear()
+    print("\n--- Содержание ---")
+    print("""1.Бывший морпех Джейк Салли, прикованный к инвалидному креслу, прибывает на планету Пандора, где с помощью 
+    специального устройства управляет телом аватара — гибрида человека и местного жителя из расы На’ви, чтобы наладить 
+    контакт с аборигенами, мешающими добыче ценного минерала . Постепенно он сближается с племенем На’ви и влюбляется в 
+    прекрасную Нейтири, что заставляет его перейти на сторону местных жителей и возглавить их борьбу против военной машины
+    корпорации, чтобы спасти Пандору от уничтожения  """)
+    print("2. Назад")
+
+def content_Anna_bolein():
+    clear()
+    print("\n--- Содержание ---")
+    print("""1.Королева Анна чувствует охлаждение мужа, который увлекся ее фрейлиной Джейн Сеймур.
+     Используя встречу Анны с её бывшим женихом как предлог, король обвиняет её в измене и 
+     приговаривает к казни, в то время как сам готовится к свадьбе с Джейн""")
+    print("2. Назад")
+
+def content_Two_Queen():
+    clear()
+    print("\n--- Содержание ---")
+    print("""1.В центре сюжета — возвращение овдовевшей королевы Франции Марии Стюарт в Шотландию, 
+    где она вступает в опасное соперничество за английский престол со своей кузиной, королевой
+    Елизаветой I. Их противостояние, разворачивающееся в мире мужских интриг, приводит Марию к 
+    годам заточения и финальной встрече с плахой, в то время как Елизавета навсегда остается королевой""")
+    print("2. Назад")
 
 def Author_Ywasi():
     clear()
@@ -240,14 +290,22 @@ def Book_F_T():
     print("2. Головоломка")
     print("3. Назад")
 
-def content_Perelomi():
+def content_Xroniki_Narnii():
     clear()
     print("\n--- Содержание ---")
-    print("""1. Девушка по имени Алиса страдает от «черных дыр» в памяти, и вскоре вокруг неё начинают
-     происходить пугающие события: появляется фотография её давно погибшей сестры-близнеца, а на отца 
-     совершено нападение . Расследование вскрывает жуткую связь между этими происшествиями, травмой, 
-     пережитой её отцом во время войны в Ливане, и изощренным планом мести, корни которого уходят в 
-     далекое прошлое""")
+    print("""1. «Хроники Нарнии» — это цикл из семи фэнтезийных повестей, в которых дети из нашего мира 
+    попадают в волшебную страну Нарнию. Там они участвуют в извечной борьбе добра и зла, помогая её 
+    обитателям и великому льву Аслану побеждать тёмные силы, а также переживают события от сотворения 
+    этого мира до его конца""")
+    print("2. Назад")
+
+def content_Vlastelin_Kolec():
+    clear()
+    print("\n--- Содержание ---")
+    print("""1. Хоббит Фродо Бэггинс получает в наследство Кольцо Всевластья, которое необходимо уничтожить, 
+    чтобы тёмный властелин Саурон не поработил Средиземье. В сопровождении верных друзей и могущественных 
+    союзников Фродо отправляется в опасный путь к жерлу вулкана Роковая гора, где только и можно навсегда 
+    избавить мир от власти Кольца.""")
     print("2. Назад")
 
 def content_Perelomi():
@@ -303,76 +361,39 @@ def main():
 
                 if choice == "1":
                     Author_Ywasi()
-                    clear()
-                    choice = input("Выберите действия 1-3: ").strip()
+                    sub = input("→ ").strip()
+
+                    if sub in ("1", "2"):
+                        clear()
+                        print(f"Выполняется действие {sub}...")
+                        time.sleep(2)
 
                     if choice == "1":
                         Book_C_K()
-                        clear()
-                        choice = input("Выберите действия 1-3: ").strip()
+                        sub = input("→ ").strip()
+
+                        if sub in ("1", "2"):
+                            clear()
+                            print(f"Выполняется действие {sub}...")
+                            time.sleep(2)
 
                         if choice == "1":
                             content_Ono()
-                            clear()
-                            choice = input("Выберите действия 1-3: ").strip()
+                            sub = input("→ ").strip()
+
+                            if sub in ("1", "2"):
+                                clear()
+                                print(f"Выполняется действие {sub}...")
+                                time.sleep(2)
 
                         elif choice == "2":
                             content_Kladbishe()
-                            choice = input("Выберите действия 1-3: ").strip()
-                            clear()
+                            sub = input("→ ").strip()
 
-                        elif choice == "3":
-                            break
-                        else:
-                            clear()
-                            print("Неверный выбор")
-                            time.sleep(1.4)
-
-                    if choice == "2":
-                        Book_F_T()
-                        clear()
-                        choice = input("Выберите действия 1-3: ").strip()
-
-                        if choice == "1":
-                            content_Perelomi()
-                            clear()
-                            choice = input("Выберите действия 1-3: ").strip()
-
-                        elif choice == "2":
-                            content_Golovolomka()
-                            clear()
-                            choice = input("Выберите действия 1-3: ").strip()
-
-                        elif choice == "3":
-                            break
-                        else:
-                            clear()
-                            print("Неверный выбор")
-                            time.sleep(1.4)
-
-                if choice == "2":
-                    Book_Fentesi()
-                    clear()
-                    choice = input("Выберите действия 1-3: ").strip()
-
-                    if choice == "1":
-                        content_Ono()
-                        clear()
-                        choice = input("Выберите действия 1-3: ").strip()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            if sub in ("1", "2"):
+                                clear()
+                                print(f"Выполняется действие {sub}...")
+                                time.sleep(2)
 
                 elif choice == "3":
                     break
@@ -381,33 +402,151 @@ def main():
                     print("Неверный выбор")
                     time.sleep(1.4)
 
-        elif choice == "2":
-            while True:
-                two()
-                sub = input("→ ").strip()
+                    if choice == "2":
+                        Book_F_T()
+                        clear()
+                        sub = input("→ ").strip()
 
-                if sub in ("1", "2"):
-                    clear()
-                    print(f"Выполняется действие {sub}...")
-                    time.sleep(2)
-                elif sub == "3":
+                        if sub in ("1", "2"):
+                            clear()
+                            print(f"Выполняется действие {sub}...")
+                            time.sleep(2)
+
+                        if choice == "1":
+                            content_Perelomi()
+                            sub = input("→ ").strip()
+
+                            if sub in ("1", "2"):
+                                clear()
+                                print(f"Выполняется действие {sub}...")
+                                time.sleep(2)
+
+                        elif choice == "2":
+                            content_Golovolomka()
+                            sub = input("→ ").strip()
+
+                            if sub in ("1", "2"):
+                                clear()
+                                print(f"Выполняется действие {sub}...")
+                                time.sleep(2)
+
+                    elif choice == "3":
+                        break
+                    else:
+                        clear()
+                        print("Неверный выбор")
+                        time.sleep(1.4)
+
+                if choice == "2":
+                    Book_Fentesi()
+                    sub = input("→ ").strip()
+
+                    if sub in ("1", "2"):
+                        clear()
+                        print(f"Выполняется действие {sub}...")
+                        time.sleep(2)
+
+                    if choice == "1":
+                        content_Xroniki_Narnii()
+                        sub = input("→ ").strip()
+
+                        if sub in ("1", "2"):
+                            clear()
+                            print(f"Выполняется действие {sub}...")
+                            time.sleep(2)
+
+                    elif choice == "2":
+                        content_Vlastelin_Kolec()
+                        sub = input("→ ").strip()
+
+                        if sub in ("1", "2"):
+                            clear()
+                            print(f"Выполняется действие {sub}...")
+                            time.sleep(2)
+
+                elif choice == "3":
                     break
                 else:
                     clear()
                     print("Неверный выбор")
                     time.sleep(1.4)
 
-        elif choice == "3":
-            clear()
-            print("До свидания...")
-            time.sleep(1.2)
-            clear()
-            break
 
-        else:
-            clear()
-            print("Неверный выбор")
-            time.sleep(1.4)
+        if choice == "2":
+            while True:
+                Genre_film()
+                choice = input("Выберите действия 1-3: ").strip()
+
+                if choice == "1":
+                    Film_History()
+                    sub = input("→ ").strip()
+
+                    if sub in ("1", "2"):
+                        clear()
+                        print(f"Выполняется действие {sub}...")
+                        time.sleep(2)
+
+                    if choice == "1":
+                        content_Anna_bolein()
+                        sub = input("→ ").strip()
+
+                        if sub in ("1", "2"):
+                            clear()
+                            print(f"Выполняется действие {sub}...")
+                            time.sleep(2)
+
+                    elif choice == "2":
+                        content_Two_Queen()
+                        sub = input("→ ").strip()
+
+                        if sub in ("1", "2"):
+                            clear()
+                            print(f"Выполняется действие {sub}...")
+                            time.sleep(2)
+
+
+                elif choice == "3":
+                    time.sleep(1.2)
+                    clear()
+                    break
+                else:
+                    clear()
+                    print("Неверный выбор")
+                    time.sleep(1.4)
+
+                if choice == "2":
+                    Film_Fantastica()
+                    sub = input("→ ").strip()
+
+                    if sub in ("1", "2"):
+                        clear()
+                        print(f"Выполняется действие {sub}...")
+                        time.sleep(2)
+
+                    if choice == "1":
+                        content_Iron_man()
+                        sub = input("→ ").strip()
+
+                        if sub in ("1", "2"):
+                            clear()
+                            print(f"Выполняется действие {sub}...")
+                            time.sleep(2)
+
+                    elif choice == "2":
+                        content_Avatar()
+                        sub = input("→ ").strip()
+
+                        if sub in ("1", "2"):
+                            clear()
+                            print(f"Выполняется действие {sub}...")
+                            time.sleep(2)
+
+                elif choice == "3":
+                    break
+                else:
+                    clear()
+                    print("Неверный выбор")
+                    time.sleep(1.4)
 
 
 main()
