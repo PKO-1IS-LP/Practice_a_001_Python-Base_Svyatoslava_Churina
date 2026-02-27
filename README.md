@@ -179,32 +179,32 @@ else:
 
 
 ```python
-import os
-import subprocess
-import time
+import os  # Импортируем модуль os для работы с операционной системой (определяем имя ОС)
+import subprocess  # Импортируем модуль subprocess для запуска внешних команд (очистка экрана)
+import time  # Импортируем модуль time для использования задержек (time.sleep)
 
 
-def clear():
-    subprocess.run("cls" if os.name == "nt" else "clear", shell=True)
+def clear():  # Объявляем функцию clear, которая очищает экран терминала
+    subprocess.run("cls" if os.name == "nt" else "clear", shell=True)  # Запускаем команду очистки: если ОС Windows (nt), то "cls", иначе "clear". shell=True разрешает выполнение через оболочку.
 
 
-def show_main_menu():
-    clear()
-    print("\n--- Главное меню ---")
-    print("1. Книги")
-    print("2. Фильмы")
-    print("3. Выход")
+def show_main_menu():  # Функция для отображения главного меню
+    clear()  # Сначала очищаем экран
+    print("\n--- Главное меню ---")  # Выводим заголовок
+    print("1. Книги")  # Пункт 1
+    print("2. Фильмы")  # Пункт 2
+    print("3. Выход")   # Пункт 3
 
 
-def Genre_book():
-    clear()
-    print("\n--- Жанр ---")
-    print("1. Ужасы")
-    print("2. Фэнтези")
-    print("3. Назад")
+def Genre_book():  # Функция для меню выбора жанра книг
+    clear()  # Очищаем экран
+    print("\n--- Жанр ---")  # Заголовок
+    print("1. Ужасы")  # Вариант 1
+    print("2. Фэнтези")  # Вариант 2
+    print("3. Назад")  # Вариант 3 - возврат
 
 
-def Genre_film():
+def Genre_film():  # Функция для меню выбора жанра фильмов
     clear()
     print("\n--- Жанр ---")
     print("1. Исторические фильмы")
@@ -212,7 +212,7 @@ def Genre_film():
     print("3. Назад")
 
 
-def Film_History():
+def Film_History():  # Функция для списка исторических фильмов
     clear()
     print("\n--- Фильмы ---")
     print("1. Анна Болейн")
@@ -220,7 +220,7 @@ def Film_History():
     print("3. Назад")
 
 
-def Film_Fantastica():
+def Film_Fantastica():  # Функция для списка фантастических фильмов
     clear()
     print("\n--- Фильмы ---")
     print("1. Железный человек")
@@ -228,17 +228,18 @@ def Film_Fantastica():
     print("3. Назад")
 
 
-def content_Iron_man():
+def content_Iron_man():  # Функция для отображения содержания фильма "Железный человек"
     clear()
     print("\n--- Содержание ---")
+    # Выводим многострочный текст с описанием фильма
     print("""1. Гениальный изобретатель и миллиардер Тони Старк попадает в плен к террористам и,
     получив ранение от собственного оружия, создаёт в пещере первый бронированный костюм, чтобы совершить побег. 
     Вернувшись домой, он переосмысливает свою жизнь, создаёт более совершенную версию костюма и вступает в схватку
     с коварным деловым партнёром, чтобы остановить продажи оружия террористам и спасти невинных людей""")
-    print("2. Назад")
+    print("2. Назад")  # Выводим пункт для возврата
 
 
-def content_Avatar():
+def content_Avatar():  # Содержание фильма "Аватар"
     clear()
     print("\n--- Содержание ---")
     print("""1. Бывший морпех Джейк Салли, прикованный к инвалидному креслу, прибывает на планету Пандора, где с помощью 
@@ -249,7 +250,7 @@ def content_Avatar():
     print("2. Назад")
 
 
-def content_Anna_bolein():
+def content_Anna_bolein():  # Содержание фильма "Анна Болейн"
     clear()
     print("\n--- Содержание ---")
     print("""1. Королева Анна чувствует охлаждение мужа, который увлекся ее фрейлиной Джейн Сеймур.
@@ -258,7 +259,7 @@ def content_Anna_bolein():
     print("2. Назад")
 
 
-def content_Two_Queen():
+def content_Two_Queen():  # Содержание фильма "Две королевы"
     clear()
     print("\n--- Содержание ---")
     print("""1. В центре сюжета — возвращение овдовевшей королевы Франции Марии Стюарт в Шотландию, 
@@ -268,7 +269,7 @@ def content_Two_Queen():
     print("2. Назад")
 
 
-def Author_Ywasi():
+def Author_Ywasi():  # Меню выбора автора книг ужасов
     clear()
     print("\n--- Авторы ---")
     print("1. Стивен Кинг")
@@ -276,7 +277,7 @@ def Author_Ywasi():
     print("3. Назад")
 
 
-def Book_Fentesi():
+def Book_Fentesi():  # Меню книг фэнтези
     clear()
     print("\n--- Книги ---")
     print("1. Хроники Нарнии")
@@ -284,7 +285,7 @@ def Book_Fentesi():
     print("3. Назад")
 
 
-def Book_C_K():
+def Book_C_K():  # Меню книг Стивена Кинга (ужасы)
     clear()
     print("\n--- Книги ---")
     print("1. Оно")
@@ -292,7 +293,7 @@ def Book_C_K():
     print("3. Назад")
 
 
-def Book_F_T():
+def Book_F_T():  # Меню книг Франка Тилье (ужасы)
     clear()
     print("\n--- Книги ---")
     print("1. Переломы")
@@ -300,7 +301,7 @@ def Book_F_T():
     print("3. Назад")
 
 
-def content_Xroniki_Narnii():
+def content_Xroniki_Narnii():  # Содержание книги "Хроники Нарнии"
     clear()
     print("\n--- Содержание ---")
     print("""1. «Хроники Нарнии» — это цикл из семи фэнтезийных повестей, в которых дети из нашего мира 
@@ -310,7 +311,7 @@ def content_Xroniki_Narnii():
     print("2. Назад")
 
 
-def content_Vlastelin_Kolec():
+def content_Vlastelin_Kolec():  # Содержание книги "Властелин колец"
     clear()
     print("\n--- Содержание ---")
     print("""1. Хоббит Фродо Бэггинс получает в наследство Кольцо Всевластья, которое необходимо уничтожить, 
@@ -320,7 +321,7 @@ def content_Vlastelin_Kolec():
     print("2. Назад")
 
 
-def content_Perelomi():
+def content_Perelomi():  # Содержание книги "Переломы"
     clear()
     print("\n--- Содержание ---")
     print("""1. Девушка по имени Алиса страдает от «черных дыр» в памяти, и вскоре вокруг неё начинают
@@ -331,7 +332,7 @@ def content_Perelomi():
     print("2. Назад")
 
 
-def content_Golovolomka():
+def content_Golovolomka():  # Содержание книги "Головоломка"
     clear()
     print("\n--- Содержание ---")
     print("""1. Главный герой Илан вместе с бывшей девушкой ввязывается в таинственную игру «Паранойя», 
@@ -342,7 +343,7 @@ def content_Golovolomka():
     print("2. Назад")
 
 
-def content_Ono():
+def content_Ono():  # Содержание книги "Оно"
     clear()
     print("\n--- Содержание ---")
     print("""1. Семеро детей, объединившись в «Клуб неудачников», противостоят древнему злу, которое 
@@ -353,7 +354,7 @@ def content_Ono():
     print("2. Назад")
 
 
-def content_Kladbishe():
+def content_Kladbishe():  # Содержание книги "Кладбище домашних животных"
     clear()
     print("\n--- Содержание ---")
     print("""1. Семья Кридов переезжает в дом рядом с оживленной трассой и мистическим индейским кладбищем, 
@@ -363,145 +364,144 @@ def content_Kladbishe():
     print("2. Назад")
 
 
-def main():
-    while True:
-        show_main_menu()
-        main_choice = input("Выберите действие 1-3: ").strip()
+def main():  # Главная функция, содержащая всю логику программы
+    while True:  # Бесконечный цикл, пока не выберем выход
+        show_main_menu()  # Показываем главное меню
+        main_choice = input("Выберите действие 1-3: ").strip()  # Запрашиваем ввод, убираем пробелы
 
-        if main_choice == "1":  # Книги
-            while True:
-                Genre_book()
-                genre_choice = input("Выберите жанр 1-3: ").strip()
+        if main_choice == "1":  # Если выбрали "Книги"
+            while True:  # Входим в цикл меню книг
+                Genre_book()  # Показываем меню жанров книг
+                genre_choice = input("Выберите жанр 1-3: ").strip()  # Запрашиваем выбор жанра
 
-                if genre_choice == "1":  # Ужасы
-                    while True:
-                        Author_Ywasi()
-                        author_choice = input("Выберите автора 1-3: ").strip()
+                if genre_choice == "1":  # Если выбран жанр "Ужасы"
+                    while True:  # Цикл выбора автора
+                        Author_Ywasi()  # Показываем меню авторов ужасов
+                        author_choice = input("Выберите автора 1-3: ").strip()  # Ввод автора
 
                         if author_choice == "1":  # Стивен Кинг
-                            while True:
-                                Book_C_K()
-                                book_choice = input("Выберите книгу 1-3: ").strip()
-                                if book_choice == "1":
-                                    content_Ono()
-                                    input("Нажмите Enter, чтобы вернуться к списку книг...")
-                                elif book_choice == "2":
+                            while True:  # Цикл выбора книги Стивена Кинга
+                                Book_C_K()  # Показываем список его книг
+                                book_choice = input("Выберите книгу 1-3: ").strip()  # Ввод книги
+                                if book_choice == "1":  # Выбрана книга "Оно"
+                                    content_Ono()  # Показываем содержание
+                                    input("Нажмите Enter, чтобы вернуться к списку книг...")  # Ожидание нажатия Enter для возврата
+                                elif book_choice == "2":  # Выбрана книга "Кладбище домашних животных"
                                     content_Kladbishe()
                                     input("Нажмите Enter, чтобы вернуться к списку книг...")
-                                elif book_choice == "3":
-                                    break  # Назад к выбору автора
-                                else:
+                                elif book_choice == "3":  # Выбрано "Назад"
+                                    break  # Выход из цикла книг Стивена Кинга, возврат к выбору автора
+                                else:  # Если ввели что-то другое
                                     clear()
                                     print("Неверный выбор. Попробуйте снова.")
-                                    time.sleep(1.4)
+                                    time.sleep(1.4)  # Пауза 1.4 секунды, затем цикл продолжится
 
                         elif author_choice == "2":  # Франк Тилье
-                            while True:
-                                Book_F_T()
+                            while True:  # Цикл выбора книги Франка Тилье
+                                Book_F_T()  # Показываем его книги
                                 book_choice = input("Выберите книгу 1-3: ").strip()
-                                if book_choice == "1":
+                                if book_choice == "1":  # "Переломы"
                                     content_Perelomi()
                                     input("Нажмите Enter, чтобы вернуться к списку книг...")
-                                elif book_choice == "2":
+                                elif book_choice == "2":  # "Головоломка"
                                     content_Golovolomka()
                                     input("Нажмите Enter, чтобы вернуться к списку книг...")
-                                elif book_choice == "3":
-                                    break  # Назад к выбору автора
+                                elif book_choice == "3":  # Назад
+                                    break  # Возврат к выбору автора
                                 else:
                                     clear()
                                     print("Неверный выбор. Попробуйте снова.")
                                     time.sleep(1.4)
 
-                        elif author_choice == "3":
-                            break  # Назад к выбору жанра
-                        else:
+                        elif author_choice == "3":  # Выбрано "Назад" в меню авторов
+                            break  # Выход из цикла выбора автора, возврат к выбору жанра
+                        else:  # Неверный ввод в меню авторов
                             clear()
                             print("Неверный выбор. Попробуйте снова.")
                             time.sleep(1.4)
 
-                elif genre_choice == "2":  # Фэнтези
-                    while True:
-                        Book_Fentesi()
+                elif genre_choice == "2":  # Если выбран жанр "Фэнтези"
+                    while True:  # Цикл выбора книги фэнтези
+                        Book_Fentesi()  # Показываем список книг фэнтези
                         book_choice = input("Выберите книгу 1-3: ").strip()
-                        if book_choice == "1":
+                        if book_choice == "1":  # "Хроники Нарнии"
                             content_Xroniki_Narnii()
                             input("Нажмите Enter, чтобы вернуться к списку книг...")
-                        elif book_choice == "2":
+                        elif book_choice == "2":  # "Властелин колец"
                             content_Vlastelin_Kolec()
                             input("Нажмите Enter, чтобы вернуться к списку книг...")
-                        elif book_choice == "3":
-                            break  # Назад к выбору жанра
+                        elif book_choice == "3":  # Назад
+                            break  # Возврат к выбору жанра
                         else:
                             clear()
                             print("Неверный выбор. Попробуйте снова.")
                             time.sleep(1.4)
 
-                elif genre_choice == "3":
-                    break  # Назад в главное меню
-                else:
+                elif genre_choice == "3":  # В меню жанров выбрано "Назад"
+                    break  # Выход из цикла книг, возврат в главное меню
+                else:  # Неверный ввод в меню жанров
                     clear()
                     print("Неверный выбор. Попробуйте снова.")
                     time.sleep(1.4)
 
-        elif main_choice == "2":  # Фильмы
-            while True:
-                Genre_film()
-                genre_choice = input("Выберите жанр 1-3: ").strip()
+        elif main_choice == "2":  # Если выбрали "Фильмы"
+            while True:  # Цикл меню фильмов
+                Genre_film()  # Показываем жанры фильмов
+                genre_choice = input("Выберите жанр 1-3: ").strip()  # Ввод жанра фильмов
 
-                if genre_choice == "1":  # Исторические
-                    while True:
-                        Film_History()
+                if genre_choice == "1":  # Исторические фильмы
+                    while True:  # Цикл выбора исторического фильма
+                        Film_History()  # Список исторических фильмов
                         film_choice = input("Выберите фильм 1-3: ").strip()
-                        if film_choice == "1":
+                        if film_choice == "1":  # "Анна Болейн"
                             content_Anna_bolein()
                             input("Нажмите Enter, чтобы вернуться к списку фильмов...")
-                        elif film_choice == "2":
+                        elif film_choice == "2":  # "Две королевы"
                             content_Two_Queen()
                             input("Нажмите Enter, чтобы вернуться к списку фильмов...")
-                        elif film_choice == "3":
-                            break  # Назад к выбору жанра
+                        elif film_choice == "3":  # Назад
+                            break  # Возврат к выбору жанра фильмов
                         else:
                             clear()
                             print("Неверный выбор. Попробуйте снова.")
                             time.sleep(1.4)
 
                 elif genre_choice == "2":  # Фантастика
-                    while True:
-                        Film_Fantastica()
+                    while True:  # Цикл выбора фантастического фильма
+                        Film_Fantastica()  # Список фантастических фильмов
                         film_choice = input("Выберите фильм 1-3: ").strip()
-                        if film_choice == "1":
+                        if film_choice == "1":  # "Железный человек"
                             content_Iron_man()
                             input("Нажмите Enter, чтобы вернуться к списку фильмов...")
-                        elif film_choice == "2":
+                        elif film_choice == "2":  # "Аватар"
                             content_Avatar()
                             input("Нажмите Enter, чтобы вернуться к списку фильмов...")
-                        elif film_choice == "3":
-                            break  # Назад к выбору жанра
+                        elif film_choice == "3":  # Назад
+                            break  # Возврат к выбору жанра
                         else:
                             clear()
                             print("Неверный выбор. Попробуйте снова.")
                             time.sleep(1.4)
 
-                elif genre_choice == "3":
-                    break  # Назад в главное меню
-                else:
+                elif genre_choice == "3":  # В меню жанров фильмов выбрано "Назад"
+                    break  # Выход из цикла фильмов, возврат в главное меню
+                else:  # Неверный ввод в меню жанров фильмов
                     clear()
                     print("Неверный выбор. Попробуйте снова.")
                     time.sleep(1.4)
 
-        elif main_choice == "3":  # Выход
+        elif main_choice == "3":  # Если выбрали "Выход"
             clear()
             print("До свидания!")
-            break
-        else:
+            break  # Завершаем бесконечный цикл, программа закрывается
+        else:  # Неверный ввод в главном меню
             clear()
             print("Неверный выбор. Попробуйте снова.")
             time.sleep(1.4)
 
 
-if __name__ == "__main__":
-    main()
-
+if __name__ == "__main__":  # Проверяем, запущен ли скрипт напрямую (не импортирован как модуль)
+    main()  # Запускаем главную функцию
 
 ```
 
