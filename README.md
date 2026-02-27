@@ -178,6 +178,96 @@ else:
 
 
 
+```python
+import os
+import time
 
 
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def show_main_menu():
+    clear()
+    print("\n--- Главное меню ---")
+    print("1. Книги")
+    print("2. Фильмы")
+    print("3. Выход")
+
+
+def one():
+    clear()
+    print("\n--- Меню 1 ---")
+    print("1. Ужасы")
+    print("2. Фэнтези")
+    print("3. Назад")
+
+def two():
+    clear()
+    print("\n--- Меню 2 ---")
+    print("1. Исторические фильмы")
+    print("2. Фэнтези")
+    print("3. Назад")
+
+def one_two():
+    clear()
+    print("\n--- Авторы ---")
+    print("1. Стивен Кинг")
+    print("2. Франк Тилье")
+    print("3. Назад")
+
+def main():
+    while True:
+        show_main_menu()
+
+        choice = input("Выберите дейсвтвия 1-3: ").strip()
+
+        if choice == "1":
+            while True:
+                one()
+                sub = input("→ ").strip()
+
+                if choice == "1":
+                    one_two()
+                    sub = input("→ ").strip()
+
+                elif sub == "3":
+                    break
+                else:
+                    clear()
+                    print("Неверный выбор")
+                    time.sleep(1.4)
+
+        elif choice == "2":
+            while True:
+                two()
+                sub = input("→ ").strip()
+
+                if sub in ("1", "2"):
+                    clear()
+                    print(f"Выполняется действие {sub}...")
+                    time.sleep(2)
+                elif sub == "3":
+                    break
+                else:
+                    clear()
+                    print("Неверный выбор")
+                    time.sleep(1.4)
+
+        elif choice == "3":
+            clear()
+            print("До свидания...")
+            time.sleep(1.2)
+            clear()
+            break
+
+        else:
+            clear()
+            print("Неверный выбор")
+            time.sleep(1.4)
+
+
+main()
+
+```
 
