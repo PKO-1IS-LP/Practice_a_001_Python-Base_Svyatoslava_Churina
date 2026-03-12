@@ -588,3 +588,52 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+
+
+# Задачи(stepik)
+
+Задача_1
+<img width="624" height="438" alt="image" src="https://github.com/user-attachments/assets/53832b07-1895-4562-84a9-90dfbe1dd2a8" />
+
+Решение:
+
+```python
+a = int(input("Введите число:"))
+print(a % 10)
+```
+
+Задача_2
+
+<img width="670" height="409" alt="image" src="https://github.com/user-attachments/assets/cc5bfca6-dc07-4648-868c-f9bf41e50209" />
+
+Решение:
+
+```python
+a = int(input("Введите число:"))
+print(a // 10)
+```
+
+Задача_3
+
+<img width="1151" height="425" alt="image" src="https://github.com/user-attachments/assets/9db3a787-d575-41d1-a68b-f7444314bc2c" />
+
+Решение:
+
+```python
+
+```
+
+Задача_4
+
+<img width="621" height="404" alt="image" src="https://github.com/user-attachments/assets/9c9588e2-5c72-4a7e-8667-36a8b86d51a2" />
+
+Решение:
+
+```python
+a = int(input("Введите число:"))
+b = a % 10
+c = a // 100
+d = a // 10 % 10
+print(b + c + d)
+```
