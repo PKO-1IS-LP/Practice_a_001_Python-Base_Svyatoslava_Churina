@@ -593,6 +593,7 @@ if __name__ == "__main__":
 
 # Задачи(stepik)
 
+Пропущены задачи: 3, 8, 9
 Задача_1
 <img width="624" height="438" alt="image" src="https://github.com/user-attachments/assets/53832b07-1895-4562-84a9-90dfbe1dd2a8" />
 
@@ -637,3 +638,132 @@ c = a // 100
 d = a // 10 % 10
 print(b + c + d)
 ```
+
+Задача_5
+
+<img width="889" height="537" alt="image" src="https://github.com/user-attachments/assets/0c55c5f7-327f-492d-832a-799e9c866f12" />
+
+
+Решение:
+
+```python
+a = int(input("Введите число:"))
+if a % 2 == 0:
+    print(a + 2)
+else:
+    print(a + 1)
+```
+
+Задача_6
+
+<img width="1131" height="716" alt="image" src="https://github.com/user-attachments/assets/3c957cbf-1b89-4e85-be30-3384e3f78dac" />
+
+Решение:
+
+```python
+a = int(input("Введите количество учеников: "))
+b = int(input("Введите количество учеников: "))
+c = int(input("Введите количество учеников: "))
+d = 0
+
+a = (a + 1) / 2
+d = a
+
+b = (b + 1) / 2
+d += b
+
+c = (c + 1) / 2
+d += c
+
+print(d)
+```
+
+Задача_7
+
+<img width="930" height="709" alt="image" src="https://github.com/user-attachments/assets/a6454390-138d-4d9c-9930-931bb62639dd" />
+
+Решение:
+
+```python
+a = int(input("Введите рубли: "))
+b = int(input("Введите копейки: "))
+c = int(input("Введите количество пирожков: "))
+
+print("Рубли:", a * c,"Копейки:",b * c)
+```
+
+
+
+Задача_10
+
+<img width="901" height="431" alt="image" src="https://github.com/user-attachments/assets/eec45582-694f-4965-a86c-ac878bf225fb" />
+
+Решение:
+
+```python
+a = int(input("Введите число: "))
+b = int(input("Введите число: "))
+
+if a > b:
+    print(a)
+if a < b:
+    print(b)
+else:
+    print(b)
+```
+
+Задача_11
+
+<img width="967" height="295" alt="image" src="https://github.com/user-attachments/assets/2265b702-f565-49c8-b757-8beb7448f8f6" />
+
+Решение:
+
+```python
+a = int(input("Введите число: "))
+b = int(input("Введите число: "))
+
+if a > b:
+    print(1)
+elif a < b:
+    print(2)
+else:
+    print(0)
+```
+
+Задача_12
+
+<img width="1002" height="326" alt="image" src="https://github.com/user-attachments/assets/516b0e45-992e-4333-88c5-1e778d5e81de" />
+
+Решение:
+
+```python
+a = int(input("Введите число: "))
+b = int(input("Введите число: "))
+c = int(input("Введите число: "))
+
+if c < a > b:
+    print(a)
+elif a < b > c:
+    print(b)
+else:
+    print(c)
+```
+
+
+Задача_13
+
+<img width="861" height="310" alt="image" src="https://github.com/user-attachments/assets/39f60285-9ad5-43ac-aeaf-af37b5754309" />
+
+Решение:
+
+```python
+A = int(input("Введите число: "))
+B = int(input("Введите число: "))
+C = int(input("Введите число: "))
+
+if A + B > C and A + C > B and B + C > A:
+    print("YES")
+else:
+    print("NO")
+```
+
